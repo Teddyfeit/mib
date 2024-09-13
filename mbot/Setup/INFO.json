@@ -1,0 +1,10 @@
+{
+    "host": "yourServer",
+    "version": "1.20.4",                        
+    "noChat": false,                            
+    "needsPort": false,
+    "port": 6969,
+    "owner": "Eglijohn",
+    "customStartMsg": "",
+    "processquit": true
+}

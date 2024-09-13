@@ -1,0 +1,77 @@
+"==========================================================="
+" ___  ____            _           _            __    _____ "
+" |  \/  (_)          | |         | |          /  |  / __  \"
+" | .  . |_ _ __   ___| |__   ___ | |_  __   __`| |  `' / /'"
+" | |\/| | | '_ \ / _ \ '_ \ / _ \| __| \ \ / / | |    / /  "
+" | |  | | | | | |  __/ |_) | (_) | |_   \ V / _| |__./ /__ "
+" \_|  |_/_|_| |_|\___|_.__/ \___/ \__|   \_/  \___(_)_____/"
+"  By Eglijohn                                      Release "
+"==========================================================="
+
+
+!!! READ THE ENTIRE INSTRUCTIONS FIRST BEFORE YOU START THE BOT!!!
+
+
+Requirements:
+Node.js
+In order for the JavaScript (JS) code to run outside the browser, you need Node.js.
+    1. download the Node.js installer:
+        o Go to the official Node.js website: nodejs.org.
+        o Click on the 'Download' button to download the LTS (Long Term Support) version. 
+    2. start the installer:
+        o When the installer has been downloaded, start it .
+        o Follow the instructions of the installer to install Node.js. All settings can be applied without changes.
+
+Settings:
+Link Microsoft account:
+In order for the bot to run on servers, you need a Microsoft account that has Minecraft: Java Edition.
+    1. go to Minebot v1.2a - Release/Setup/ACCOUNT.json and open the file with an editor (default is Editor, but you can also use VScode, for example)
+    2. replace yourUsername in the line “username”: “yourUsername” with your Minecraft: Java Edition username.
+    3. save the file with ctrl/ctrl + s. You can now close the editor.
+    4. now go to the main folder (Minebot v1.2 - Release) and double-click on START.bat. A command line should now open. Wait a few seconds and copy the link that appears into your browser. 
+    5. you must now log in with your Microsoft account. 
+    6. when everything is done, close the command line. 
+
+General settings:
+    1. go to Setup/INFO.json and open it like ACCOUNT.json
+    2. you can now make many settings there:
+        a. “host”: here you enter the server address on which the bot should join, if it should join a LAN world, enter “localhost”.
+        b.	“version": Enter the Minecraft version on which the server or LAN world is located. Currently, the maximum version is 1.20.4.
+        c. “noChat”: By default “false”, if the bot joins, it will be “Minebot v1.2 by Eglijohn. For help type !help” in the chat. If you set it to “true” it will not write a message in the chat when joining.
+        d.	“needsPort": ‘false’ by default, the bot assumes that the server does not need a port. However, certain servers and every LAN world need a port. Then you must set it to “true”. For the LAN world, the port under which it can be reached is written in the chat, you can simply copy it. For servers that need a port, which you would have to add to Minecraft like this: exampe.net:6969, for example, the port is 6969, so you also have to write it in the settings file.
+        e.	“owner": By default ‘Eglijohn’ (Because I programmed the bot hehe), enter the username the bot must listen to, usually your Minecraft name.
+        f.	“customStartMsg": No value by default, but you can enter a message here that the bot should write when joining the chat, even if ‘noChat’: ‘true’.
+        g.	“processquit” : ‘true’ by default, so if you enter the command !quit (more on this later), the whole script stops. However, if you set it to “false”, the bot will rejoin after 5 seconds and you will have to close the command line to stop it completely.
+        h.	“botversion": the version of the bot, DO NOT CHANGE ANYTHING. 
+
+Now that you have made all the settings, we can start the bot.
+
+Start bot:
+This explains how to start the bot:
+    1. start the START.bat file. The bot should now log into the server/LAN world.
+    2. now you can control the bot either with commands in the public Minecraft chat or from the terminal.
+    3. here is a list of all commands:
+        a.	!help: Shows a list of all commands.
+        b.	!follow: Follows the player who entered the command.
+        c.	!stopfollow: No longer follows the player.
+        d.	!say <message>: The bot says what you write.
+        e.	!setuser <username>: Sets a new user who can then execute commands. ATTENTION: If someone else gets rights through this, you can only reset the owner through the terminal or by restarting the bot.
+        f.	!players: Shows a list of all players who are online.
+        g.	!quit: Stops the bot. If “processquit”: in INFO.json is set to “false”, the bot will rejoin after 5 seconds, and you can only stop it by closing the terminal.
+    4. you can also enter certain commands in the terminal. Since not all of them work, here is a list of all working commands:
+        a.	!help
+        b.	!players
+        c.	!quit
+        d.	!setuser <username>
+        e.	If you write something in the terminal without a '!' in front of it, the bot will write it in the chat. Minecraft commands can still be executed with a '/' in front of them.
+
+
+
+Since I am not familiar with open source licenses, I have simply written down here what you may and may not do (this does not apply to Node.js): 
+    1. you may use the code for free.
+    2. it is forbidden to claim yourself as the author of the code.
+    3. it is forbidden to change the code, unless I allow it (to coordinate with me, just add Eglijohn as a friend on Discord).
+    4. it is allowed to share the download link, but not the project (e.g. if someone else asks you for the bot, give them the download link and not the bot folder). 
+    
+I'm sorry if the instructions or code are not quite complete/incorrect, but if this is the case, please contact me (Eglijohn) on Discord. DC-Username: Eglijohn
+Many thanks to Teddyfight for the German translation

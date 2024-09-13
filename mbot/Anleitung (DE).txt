@@ -1,0 +1,83 @@
+"==========================================================="
+" ___  ____            _           _            __    _____ "
+" |  \/  (_)          | |         | |          /  |  / __  \"
+" | .  . |_ _ __   ___| |__   ___ | |_  __   __`| |  `' / /'"
+" | |\/| | | '_ \ / _ \ '_ \ / _ \| __| \ \ / / | |    / /  "
+" | |  | | | | | |  __/ |_) | (_) | |_   \ V / _| |__./ /__ "
+" \_|  |_/_|_| |_|\___|_.__/ \___/ \__|   \_/  \___(_)_____/"
+"  By Eglijohn                                      Release "
+"==========================================================="
+
+
+!!!LIES ZUERST DIE GESAMTE ANLEITUNG DURCH, BEVOR DU DEN BOT STARTEST!!!
+
+
+Anforderungen:
+Node.js
+Damit der JavaScript (JS) Code ausserhalb des Browsers laufen kann, brauchst du Node.js.
+    1.	Node.js Installer herunterladen:
+        o	Gehe auf die offizielle Node.js Website: nodejs.org.
+        o	 Klicke auf den ‘Download’ Button, um die  LTS (Long Term Support) Version herunterzuladen. 
+    2.	Starte den Installer:
+        o	Wenn der Installer heruntergeladen wurde, starte ihn .
+        o	Folge den Anweisungen des Installers, um Node.js zu installieren. Alle Einstellungen können ohne Änderungen übernommen werden.
+
+ 
+
+Einstellungen:
+Microsoft-Account verknüpfen:
+Damit der Bot auf Servern laufen kann, brauchst du einen Microsoft-Account, der Minecraft: Java Edition besitzt.
+    1.	Gehe zu Minebot v1.2a – Release/Setup/ACCOUNT.json und öffne die Datei mit einem Editor (Standard ist Editor, es geht aber auch zum Beispiel VScode)
+    2.	 Ersetze yourUsername in der Zeile «username»: «yourUsername» durch deinen Minecraft: Java Edition Nutzernamen.
+    3.	 Speichere die Datei mit strg/ctrl + s. Du kannst nun den Editor schliessen.
+    4.	 Gehe nun in den Hauptordner (Minebot v1.2 - Release)  und doppelklicke auf START.bat. Nun sollte sich eine Kommandozeile öffnen. Warte ein paar Sekunden und kopiere den Link, der dort erscheint in deinen Browser. 
+    5.	Dort musst du dich nun mit deinem Microsoft-Acoount anmelden. 
+    6.	Wenn alles getan ist, schliesse die Kommandozeile. 
+
+ 
+Allgemeine Einstellungen:
+    1.	Gehe zu Setup/INFO.json und öffne sie wie ACCOUNT.json
+    2.	Dort kannst du nun viele Einstellungen vornehmen:
+        a.	«host»: hier gibst du die Serveradresse ein, auf dem der Bot joinen soll, wenn er in eine LAN-Welt joinen soll, gibst du «localhost» ein.
+        b.	«version»: Gib hier die Minecraft-Version ein, auf der der Server oder die LAN-Welt ist. Momentan geht maximal 1.20.4.
+        c.	«noChat»: Standardmässig «false», wenn der bot joint, wird er «Minebot v1.2 by Eglijohn. For help type !help» in den Chat schreiben. Wenn du es auf «true» setzt wird er keine Nachricht beim joinen in den Chat schreiben.
+        d.	«needsPort»: standartmässig «false», der bot geht davon aus, dass der Server kein Port benötigt. Gewisse Server und jede LAN-Welt brauchen aber ein Port. Dann musst du es auf «true» setzen. Bei der LAN-Welt wird der Port unter dem sie zu erreichen ist in den Chat geschrieben, du kannst ihn einfach  kopieren. Bei Servern, die einen Port brauchen, die man also so bei Minecraft hinzufügen müsste: exampe.net:6969, ist der Port beispielsweise 6969, du musst ihn also auch in die Einstellungsdatei schreiben.
+        e.	«owner»: Standartmässig «Eglijohn» (Weil ich den bot programmiert habe hehe), Gib hier den Nutzernamen ein, auf den der Bot hören muss, im Normalfall dein Minecraft-Name.
+        f.	«customStartMsg»: Standartmässig keinen Wert, du kannst dort aber eine Nachricht eingeben, die der Bot beim joinen in den Chat schreiben soll, auch wenn «noChat»: «true» ist.
+        g.	«processquit» : Standartmässig «true», wenn man also den Befehl !quit eingibt (mehr dazu später), stoppt das ganze Skript. Wenn du es aber auf «false» setzt, rejoint der Bot nach 5 Sekunden und du muss die Kommandozeile schliessen, um ihn ganz zu stoppen.
+        h.	«botversion»: die Version des Bots, DARAN AUF GAR KEINEN FALL etwas ändern. 
+
+Jetzt, wo du alle Einstellungen vorgenommen hast, können wir den Bot starten.
+ 
+Bot Starten:
+Hier wird erklärt, wie man den Bot in  Betrieb nimmt:
+    1.	Starte die START.bat Datei. Jetzt sollte sich der Bot in den Server/LAN-Welt einloggen.
+    2.	Nun kannst du den bot entweder mit Befehlen im öffentlichen Minecraft-Chat steuern, oder vom Terminal aus.
+    3.	Hier eine Liste aller Befehle:
+        a.	!help: Zeigt eine Liste aller Befehle.
+        b.	!follow: Folgt dem Spieler, der den Befehl eingegeben hat.
+        c.	!stopfollow: folgt dem Spieler nicht mehr.
+        d.	!say <nachricht>: Der bot sagt, was man schreibt.
+        e.	!setuser <nutzername>: Setzt einen neuen Benutzer, der dann befehle ausführen kann. ACHTUNG: Wenn jemand anderes dadurch rechte bekommt, kann man den Owner nur durch das Terminal oder oder durch das neustarten des Bots zurücksetzen.
+        f.	!players: Zeigt eine Liste aller Spieler, die online sind.
+        g.	!quit: Stoppt den bot. Wenn «processquit»: in INFO.json auf «false» gesetzt ist, rejoint der bot nach 5 sec, und man kann ihn nur stoppen, in dem man das Terminal schliesst.
+    4.  Man kann gewisse Befehle auch im Terminal eingeben. Da nicht alle funktionieren, hier eine Liste mit allen funktionierenden Befehlen:
+        a.	!help
+        b.	!players
+        c.	!quit
+        d.	!setuser <nutzername>
+        e.	Wenn man etwas in das Terminal schreibt, ohne ein ‘!’ davor zu haben, schreibt der Bot es in den Chat. Minecraft-Befehle kann man mit einem ‘/’ davor immer noch ausführen.
+
+Tipps:
+    1.  In log.txt wird der minecraft-chat gespeichert.
+    2. Du kannst in ACCOUNT.json anstelle von microsoft '"auth":' auch offline setzen für Cracked Server oder LAN-Welten.
+
+
+Da ich mich nicht mit Open-Source Lizenzen auskenne, habe ich einfach hier aufgeschrieben, was man darf und was nicht (Das betrifft nicht Node.js): 
+    1.  Du darfst den Code gratis nutzen.
+    2.  Es ist verboten, sich selber als Autor des Codes auszugeben.
+    3.  Es ist verboten, den Code zu ändern, vorausgesetzt ich erlaube es nicht (Um sich mit mir abzusprechen, einfach Eglijohn bei Discord als Freund hinzufügen).
+    4.  Es ist erlaubt, den download-Link weiterzugeben, jedoch nicht das Projekt (Zb. wenn jemand anderes dich nach dem Bot fragt, gib ihm den Download-link und nicht den Bot-Ordner). 
+
+Es tut mir leid, wenn die Anleitung oder der Code nicht ganz vollständig/fehlerhaft ist, wenn das aber der Fall sein sollte, wende dich bitte an mich (Eglijohn) bei Discord. DC-Username: Eglijohn
+Vielen Dank an Teddyfight für die deutsche Übersetzung
